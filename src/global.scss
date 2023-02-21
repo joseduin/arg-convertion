@@ -24,3 +24,59 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-toolbar {
+    --background: transparent;
+}
+
+ion-icon {
+	&[class*='custom-'] {
+		mask-size: contain;
+		mask-position: 50% 50%;
+		mask-repeat: no-repeat;
+		background: currentColor;
+		width: 1em;
+		height: 1em;
+	}
+
+	&[class*='custom-menu'] {
+		mask-image: url(./assets//svg/menu.svg);
+    }
+}
+
+.flex {
+    display: flex;
+}
+.flex1 {
+    display: flex;
+    flex: 1;
+}
+.center-vertical {
+    display: flex;
+    align-items: center;
+ }
+
+.width-full {
+	width: 100%;
+}
+
+.text-default {
+    color: #729dfe;
+    font-weight: 600;
+}
+.text-black {
+    color: #333333;
+    font-weight: 600;
+}
+
+.icon-currency {
+    width: 30px;
+    height: 30px;
+}
+
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}

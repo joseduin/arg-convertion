@@ -1,0 +1,24 @@
+<ion-row class="width-full flex">
+    <ion-col size="6" class="center-vertical">
+        <img [src]="currency.icon" class="icon-currency">
+        <ion-text class="text-default ion-padding-start">
+          <span>{{ currency.name | uppercase }}</span>
+        </ion-text>
+    </ion-col>
+    <ion-col size="6">
+        <ion-item fill="outline">
+            <ion-input
+                placeholder="monto"
+                debounce="300"
+                enterkeyhint="done"
+                type="number"
+                inputmode="decimal"
+                min="0"
+                [value]="currency.value"
+                (ionInput)="onInput()"
+                (keyup.enter)="done()"
+            ></ion-input>
+        </ion-item>
+    </ion-col>
+</ion-row>
+

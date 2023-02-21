@@ -1,0 +1,23 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Configuración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-horizontal">
+    <ion-row>
+        <ion-text>
+            <h6>Conversiones</h6>
+        </ion-text>
+    </ion-row>
+    <ion-grid class="ion-padding-vertical">
+        <ng-container *ngIf="convertCore.currencies$ | async as currencies">
+            <ng-container *ngFor="let currency of currencies; trackBy: trackItem">
+                <app-config-input [currency]="currency"></app-config-input>
+            </ng-container>
+        </ng-container>
+    </ion-grid>
+</ion-content>
